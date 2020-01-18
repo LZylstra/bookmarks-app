@@ -3,6 +3,8 @@ import Rating from '../Rating/Rating';
 import './BookmarkItem.css';
 
 export default function BookmarkItem(props) {
+  
+  const { onClickUpdate } = this.props
   return (
     <li className='BookmarkItem'>
       <div className='BookmarkItem__row'>
@@ -26,6 +28,12 @@ export default function BookmarkItem(props) {
         >
           Delete
         </button>
+        <button 
+          onClick={onClickUpdate}
+          // onClick={() => props.clickPage('update')}
+          >
+          Update
+      </button>
       </div>
     </li>
   )
